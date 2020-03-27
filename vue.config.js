@@ -1,3 +1,6 @@
+const BASE_URL = '';
+
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  baseUrl: BASE_URL
 }
