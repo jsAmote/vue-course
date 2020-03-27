@@ -4,8 +4,6 @@ import router from './router'
 
 Vue.use(VueRouter)
 
-const routes =
-
 const router = new VueRouter({
   routes : router
 })
