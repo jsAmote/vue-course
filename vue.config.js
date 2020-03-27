@@ -1,20 +1,20 @@
-const path = require('path');
+const path = require('path')
 
 const resove = dir => path.join(__dirname, dir)
 
-const BASE_URL = process.env.NODE_ENV === 'production' ? '/iview-admin' : '/';
+const BASE_URL = process.env.NODE_ENV === 'production' ? './' : '/'
 
 module.exports = {
   lintOnSave: false,
-  baseUrl: BASE_URL,
+  publicPath: BASE_URL,
   chainWebpack: config => {
-    config.resove.alias
+    config.resolve.alias
       .set('@', resove('src'))
       .set('_c', resove('src/components'))
   },
   //打包时不生成.map文件
   productionSourceMap: false,
   devServer: {
-    proxy: 'http://localhost:4000'
+    proxy: 'http://localhost:5000'
   }
 }
